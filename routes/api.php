@@ -12,13 +12,13 @@ Route::group(
     ['prefix' => 'v1',  'accept' => 'application/json'],
     function () {
 
-        Route::get('/status', function () {
+        Route::get('/', function () {
 
-            $port = url();
+            $port = url()->current();
 
             return response()->json([
                 'status' => true,
-                'message' => 'Server tunning on ' . $port
+                'message' => 'Server running on ' . $port
             ], 200);
         });
         Route::middleware('guest')->group(function () {
