@@ -8,11 +8,19 @@ use App\Http\Controllers\Api\v1\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Api\v1\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Api\v1\Auth\EmailVerificationNotificationController;
 
-
 Route::group(
     ['prefix' => 'v1',  'accept' => 'application/json'],
     function () {
 
+        Route::get('/status', function () {
+
+            $port = url();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Server tunning on ' . $port
+            ], 200);
+        });
         Route::middleware('guest')->group(function () {
             Route::post('/register', [RegisteredUserController::class, 'store']);
 
