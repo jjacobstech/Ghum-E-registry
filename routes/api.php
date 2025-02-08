@@ -15,7 +15,6 @@ Route::group(
         Route::get('/', function () {
 
             $url = url()->current();
-
             return response()->json([
                 'status' => true,
                 'message' => 'Server running on ' . $url

@@ -9,16 +9,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-/**
- * @OA\Info(
- *              title="E-registry Api",
- *              version="1.0.0",
- * ),
- *
- * @OA\PathItem(path="/api")
- *
- *
- */
 class RegisteredUserController extends Controller
 {
     /**
