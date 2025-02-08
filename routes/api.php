@@ -14,11 +14,11 @@ Route::group(
 
         Route::get('/', function () {
 
-            $port = url()->current();
+            $url = url()->current();
 
             return response()->json([
                 'status' => true,
-                'message' => 'Server running on ' . $port
+                'message' => 'Server running on ' . $url
             ], 200);
         });
         Route::middleware('guest')->group(function () {
