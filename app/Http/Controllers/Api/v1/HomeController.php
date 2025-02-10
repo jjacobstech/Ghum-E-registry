@@ -23,15 +23,15 @@ class HomeController extends Controller
 
         $sentFiles = Files::where('sender_id', '=', Auth::id())->count();
 
-        $newFiles = Files::where('receiver_id', '=', Auth::id())->where('', '=', Auth::id())->where('status', '=', 'action_required')->count();
+        $newFiles = Files::where('receiver_id', '=', Auth::id())->where('status', '=', 'action_required')->count();
 
-        $rejectedFiles = Files::where('receiver_id', '=', Auth::id())->where('', '=', Auth::id())->where('status', '=', 'rejected')->count();
+        $rejectedFiles = Files::where('receiver_id', '=', Auth::id())->where('status', '=', 'rejected')->count();
 
-        $acceptedFiles = Files::where('receiver_id', '=', Auth::id())->where('', '=', Auth::id())->where('status', '=', 'accepted')->count();
+        $acceptedFiles = Files::where('receiver_id', '=', Auth::id())->where('status', '=', 'accepted')->count();
 
-        $approvedFiles = Files::where('receiver_id', '=', Auth::id())->where('', '=', Auth::id())->where('status', '=', 'approved')->count();
+        $approvedFiles = Files::where('receiver_id', '=', Auth::id())->where('status', '=', 'approved')->count();
 
-        $pendingFiles = Files::where('receiver_id', '=', Auth::id())->where('', '=', Auth::id())->where('status', '=', 'pending')->count();
+        $pendingFiles = Files::where('receiver_id', '=', Auth::id())->where('status', '=', 'pending')->count();
 
         $archivedFiles = Files::where('receiver_id', '=', Auth::id())->where('archived', '=', true)->count();
 
