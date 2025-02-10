@@ -43,7 +43,7 @@ Route::group(
 
                 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
 
-                Route::prefix('user')->group(function () {
+                Route::group(['prefix' => 'user'], function () {
                     require __DIR__ . '/user.php';
                 });
             }

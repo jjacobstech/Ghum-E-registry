@@ -3,9 +3,9 @@
 namespace App\Helpers;
 
 use App\Models\Files;
+use Carbon\Traits\Timestamp;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -19,21 +19,13 @@ class FileHelper
         $originalFileName = $file->getClientOriginalName();
         $fileExtension = $file->getClientOriginalExtension();
         $fileSize = $file->getSize();
-        $fileName = Str::random(25);
+        $fileName = time() . Str::random(25);
 
-        return (object) ['name' => $fileName, 'originalFileName' => $originalFileName, 'extension' => $fileExtension, 'size' => $fileSize];
+        return (object) ['name' => $originalFileName, 'filename' => $fileName . '.' . $fileExtension, 'extension' => $fileExtension, 'size' => $fileSize];
     }
     public static function saveFile(UploadedFile $file, $filename)
     {
-
-        $storage = cloudinary()->upload($file->getRealPath(), ['folder' => 'e-registry/files/', 'resource_type' => 'raw', 'public_id' => $filename])->getSecurePath();
-
-        if (!$storage) {
-            return response()->json(['messsage' => 'server error'], 500);
-        }
-        if (Storage::exists($storage)) {
-            return response()->json(['messsage' => 'file exists'], 403);
-        }
+        $storage = $file->storeAs(env('FILES_PATH') . $filename);
 
         return (object) ['path' => $storage];
     }
@@ -46,13 +38,14 @@ class FileHelper
         $description = $request->description;
         $subject = $request->subject;
         $assignedTo = $request->assigned_to;
+        $path = Storage::url($path);
 
 
         $saveFile = Files::create([
-            'original_file_name' => $fileData->originalFileName,
-            'file_name' => $fileData->name,
+            'original_file_name' => $fileData->name,
+            'file_name' => $fileData->filename,
             'file_size' => $fileData->size,
-            'file_path' => $path,
+            'file_url' => $path,
             'file_type' => $fileData->extension,
             'title' => $title,
             'description' => $description,
@@ -61,7 +54,7 @@ class FileHelper
             'subject' => $subject,
             'dept_in_request' => Auth::user()->department,
             'assigned_to' => $assignedTo,
-
+            'assigned_from' => Auth::user()->job_title,
         ]);
 
         if (!$saveFile) {
@@ -89,13 +82,17 @@ class FileHelper
         return response()->json(['status' => true, 'data' => $Files], 200);
     }
 
-    public static function modifyFileStatus(String $id, $status)
+    public static function modifyFileStatus(String $id, $status, $comment = null)
     {
 
         $file = Files::where('id', '=', $id)->first();
 
         if (!$file) {
             return response()->json(['status' => false, 'error' => 'file does not exist'], 400);
+        }
+
+        if (!$comment) {
+            $file->comment = $comment;
         }
 
         $file->status = $status;
@@ -106,6 +103,6 @@ class FileHelper
             return response()->json(['status' => false, 'error' => 'server error'], 500);
         }
 
-        return response()->json(['status' => true, 'messager' => 'file ' . $status], 200);
+        return response()->json(['status' => true, 'message' => 'file ' . $status], 200);
     }
 }

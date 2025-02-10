@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use App\Models\User;
-use CloudinaryLabs\CloudinaryLaravel\MediaAlly;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Files extends Model
 {
-    use HasFactory, MediaAlly;
+    use HasFactory;
 
     /**
      * fillable
@@ -18,19 +17,21 @@ class Files extends Model
      */
     protected $fillable = [
 
+        'original_file_name',
         'file_name',
         'file_size',
-        'file_path',
+        'file_url',
         'file_type',
-        'category',
-        'sender_id',
-        'receiver_id',
         'title',
         'description',
+        'sender_id',
+        'receiver_id',
         'subject',
         'dept_in_request',
-        'original_file_name',
         'assigned_to',
+        'assigned_from',
+        'comment',
+        'archived',
         'status'
     ];
 

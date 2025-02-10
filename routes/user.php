@@ -1,24 +1,27 @@
 <?php
 
-use App\Models\Files;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\v1\HomeController;
 use App\Http\Controllers\Api\v1\FilesController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/web', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', [HomeController::class, 'dashboard']);
+// Dashboard
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
 // File Actions
 Route::post('/share/file', [FilesController::class, 'shareFile']);
 Route::post('/archive/file', [FilesController::class, 'archiveFile']);
-Route::post('/file/reject/{id}', [FilesController::class, 'rejectFile']);
-Route::post('/file/accept/{id}', [FilesController::class, 'acceptFile']);
-Route::post('/file/delete/{id}', [FilesController::class, 'deleteFile']);
+Route::post('/file/reject/{id?}', [FilesController::class, 'rejectFile']); //
+Route::post('/file/approve/{id?}', [FilesController::class, 'approveFile']); //
+Route::get('/file/accept/{id?}', [FilesController::class, 'acceptFile']);
+Route::get('/file/delete/{id?}', [FilesController::class, 'deleteFile']);
+
+
+Route::get('/file/reverse/action/{id?}', [FilesController::class, 'reverseAction']);
 
 // File Retrieval
-Route::get('/shared/file', [FilesController::class, 'sentFiles']);
-Route::get('/received/file', [FilesController::class, 'receivedFiles']);
-Route::get('/archived/file', [FilesController::class, 'archivedFiles']);
+Route::get('/new/files', [FilesController::class, 'newFiles']);
+Route::get('/shared/files', [FilesController::class, 'sentFiles']);
+Route::get('/received/files', [FilesController::class, 'receivedFiles']);
+Route::get('/archived/files', [FilesController::class, 'archivedFiles']);
+Route::get('/pending/files', [FilesController::class, 'pendingFiles']);

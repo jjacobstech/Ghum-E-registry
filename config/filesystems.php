@@ -47,11 +47,14 @@ return [
             'report' => false,
         ],
 
-        'cloud' => [
+        'custom' => [
             'driver' => 'local',
-            'root' => public_path('storage'),
+            'root' => public_path('uploads'),
+            'url' => env('APP_URL') . '/uploads',
             'visibility' => 'public',
         ],
+
+
 
         's3' => [
             'driver' => 's3',
@@ -81,6 +84,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('uploads') => storage_path('app/public'),
     ],
 
 ];
