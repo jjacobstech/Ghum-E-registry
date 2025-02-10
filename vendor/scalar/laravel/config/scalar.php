@@ -48,7 +48,7 @@ return [
     | Scalar Galaxy package. You can change this to use a custom OpenAPI file.
     |
     */
-    'url' => 'docs.openapi',
+    'url' => 'https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.json',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
         // 'purple',
         // 'saturn',
         // 'solarized',
-        'none',
+        // 'none',
         /** The layout to use for the references */
         'layout' => 'modern',
         /** URL to a request proxy for the API client */
@@ -110,7 +110,7 @@ return [
          */
         'hideSearch' => false,
         /** Whether dark mode is on or off initially (light mode) */
-        'darkMode' => true,
+        'darkMode' => false,
         /** forceDarkModeState makes it always this state no matter what*/
         'forceDarkModeState' => 'dark',
         /** Whether to show the dark mode toggle */
@@ -123,7 +123,7 @@ return [
          * @see https://unhead.unjs.io/usage/composables/use-seo-meta
          */
         'metaData' => [
-            'title' => config('app.name') . ' API Reference',
+            'title' => config('app.name').' API Reference',
         ],
         /**
          * Path to a favicon image
@@ -135,14 +135,16 @@ return [
          * List of httpsnippet clients to hide from the clients menu
          * By default hides Unirest, pass `[]` to show all clients
          */
-        'hiddenClients' => [],
+        'hiddenClients' => [
+
+        ],
         /** Determine the HTTP client that’s selected by default */
         'defaultHttpClient' => [
             'targetId' => 'shell',
             'clientKey' => 'curl',
         ],
         /** Custom CSS to be added to the page */
-        'customCss' => 'font',
+        'customCss' => '',
         /** Prefill authentication */
         'authentication' => [
             // TODO

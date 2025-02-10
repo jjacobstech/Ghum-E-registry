@@ -22,6 +22,10 @@ class FilesController extends Controller
             'receiver' => ['required', 'string', new Checkuser],
             'file' => ['required'],
             'file.*' => ['file', 'mimes:pdf,doc,odt,xls,zip,docx,pptx,xlsx,ods,jpeg,png,jpg'],
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['string'],
+            'assigned_to' => [' required ', ' string '],
+            'subject' => [' required ', ' string '],
 
         ]);
 
