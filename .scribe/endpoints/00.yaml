@@ -4,6 +4,95 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: 'api/{fallbackPlaceholder}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      fallbackPlaceholder:
+        name: fallbackPlaceholder
+        description: ''
+        required: true
+        example: v
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      fallbackPlaceholder: v
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"endpoint does not exist"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/storage/test
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '["files\/1739371438mg5f7LW9fiLTwvH9ByvUpKaQk.png"]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: api/v1
     metadata:
       groupName: Endpoints
@@ -65,7 +154,7 @@ endpoints:
         name: fullname
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: dnadghipipcbahcjo
+        example: qtyvjrkxuhvomqao
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -75,7 +164,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: cward@example.com
+        example: hfeest@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -85,7 +174,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: aut
+        example: neque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -95,7 +184,7 @@ endpoints:
         name: department
         description: ''
         required: true
-        example: qui
+        example: reiciendis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,7 +194,7 @@ endpoints:
         name: job_title
         description: ''
         required: true
-        example: dolores
+        example: maxime
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -123,11 +212,11 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      fullname: dnadghipipcbahcjo
-      email: cward@example.com
-      password: aut
-      department: qui
-      job_title: dolores
+      fullname: qtyvjrkxuhvomqao
+      email: hfeest@example.net
+      password: neque
+      department: reiciendis
+      job_title: maxime
       agree: '1'
     fileParameters: []
     responses: []
@@ -162,7 +251,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: chris.runolfsson@example.net
+        example: zoie.price@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -172,15 +261,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: rerum
+        example: itaque
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: chris.runolfsson@example.net
-      password: rerum
+      email: zoie.price@example.org
+      password: itaque
     fileParameters: []
     responses: []
     responseFields: []
@@ -214,14 +303,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: cielo63@example.org
+        example: russel.hilbert@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: cielo63@example.org
+      email: russel.hilbert@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -255,7 +344,7 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: vel
+        example: impedit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -265,7 +354,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: muhammad08@example.org
+        example: henry.lubowitz@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -275,16 +364,16 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ex
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: vel
-      email: muhammad08@example.org
-      password: ex
+      token: impedit
+      email: henry.lubowitz@example.net
+      password: dolores
     fileParameters: []
     responses: []
     responseFields: []
@@ -314,7 +403,7 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: non
+        example: amet
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -324,15 +413,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: rerum
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: non
-      hash: rerum
+      id: amet
+      hash: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -478,7 +567,7 @@ endpoints:
         name: receiver
         description: ''
         required: true
-        example: quis
+        example: voluptate
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -499,7 +588,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rnkujpmss
+        example: poixdeuyuurxtjx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -509,7 +598,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Neque consequatur adipisci et ullam occaecati necessitatibus non.'
+        example: 'Ullam delectus magni omnis.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -519,7 +608,7 @@ endpoints:
         name: assigned_to
         description: ''
         required: true
-        example: et
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -529,18 +618,18 @@ endpoints:
         name: subject
         description: ''
         required: true
-        example: fuga
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      receiver: quis
-      title: rnkujpmss
-      description: 'Neque consequatur adipisci et ullam occaecati necessitatibus non.'
-      assigned_to: et
-      subject: fuga
+      receiver: voluptate
+      title: poixdeuyuurxtjx
+      description: 'Ullam delectus magni omnis.'
+      assigned_to: eos
+      subject: inventore
     fileParameters:
       file:
         - null
@@ -576,14 +665,14 @@ endpoints:
         name: id
         description: ''
         required: true
-        example: minima
+        example: dolor
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      id: minima
+      id: dolor
     fileParameters: []
     responses: []
     responseFields: []
@@ -613,14 +702,14 @@ endpoints:
         name: id
         description: 'The ID of the .'
         required: false
-        example: exercitationem
+        example: id
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: exercitationem
+      id: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -654,14 +743,14 @@ endpoints:
         name: id
         description: 'The ID of the .'
         required: false
-        example: officia
+        example: iusto
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: officia
+      id: iusto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -695,14 +784,14 @@ endpoints:
         name: id
         description: 'The ID of the .'
         required: false
-        example: numquam
+        example: sint
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: numquam
+      id: sint
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -745,14 +834,14 @@ endpoints:
         name: id
         description: 'The ID of the .'
         required: false
-        example: ab
+        example: iusto
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: ab
+      id: iusto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -795,14 +884,14 @@ endpoints:
         name: id
         description: 'The ID of the .'
         required: false
-        example: earum
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: earum
+      id: velit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

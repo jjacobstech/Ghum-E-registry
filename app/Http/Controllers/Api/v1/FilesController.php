@@ -41,9 +41,9 @@ class FilesController extends Controller
 
             $fileData = FileHelper::getFileData($file);
 
-            if (Storage::exists('files/' . $fileData->filename)) {
-                return response()->json(['message' => 'File Exists'], 409);
-            }
+            // if (Storage::exists('files/' . $fileData->filename)) {
+            //     return response()->json(['message' => 'File Exists'], 409);
+            // }
             $storage = FileHelper::saveFile($file, $fileData->filename);
 
             $saved =  FileHelper::saveToDb($request, $fileData, $storage->path);
@@ -77,7 +77,7 @@ class FilesController extends Controller
             return response()->json(['status' => false, 'message' => 'file with the id:' . $id . ' does no exist'], 404);
         }
 
-        $archiveFile = Files::update([
+        $archiveFile = $file->update([
             'archived' => true
         ]);
 
@@ -149,7 +149,7 @@ class FilesController extends Controller
             return response()->json(['message' => 'id cannot be empty'], 400);
         }
 
-        return  FileHelper::modifyFileStatus($id,  'approve', $comment);
+        return  FileHelper::modifyFileStatus($id,  'approved', $comment);
     }
     public function rejectFile(Request $request, $id = null)
     {
@@ -166,6 +166,7 @@ class FilesController extends Controller
     public function deleteFile(Request $request, $id = null)
     {
 
+
         $id = ($id) ? $id : $request->id;
 
         if (empty($id)) {
@@ -177,7 +178,7 @@ class FilesController extends Controller
             return response()->json(['message' => 'file does not exist'], 409);
         }
 
-        $delete = Storage::delete(env('FILES_PATH') . $file->file_name);
+        $delete = Storage::delete(config('app.uploads.files') . '/' . $file->file_name);
 
         if (!$delete) {
             return response()->json(['message' => 'server error'], 500);

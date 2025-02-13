@@ -13,6 +13,15 @@ return [
     |
     */
 
+    'uploads' => [
+
+        'files' => 'files',
+        'avatar' => 'avatar'
+
+    ],
+
+
+
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
@@ -51,6 +60,8 @@ return [
     | the application so that it's available within Artisan commands.
     |
     */
+
+
 
     'url' => env('APP_URL', 'http://localhost'),
 

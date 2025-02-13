@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Storage;
 
 class FileHelper
 {
-
     public static function getFileData(UploadedFile $file)
     {
 
@@ -25,7 +24,7 @@ class FileHelper
     }
     public static function saveFile(UploadedFile $file, $filename)
     {
-        $storage = $file->storeAs(env('FILES_PATH') . $filename);
+        $storage = $file->storeAs(config('app.uploads.files'), $filename);
 
         return (object) ['path' => $storage];
     }

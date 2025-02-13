@@ -1,12 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Api\v1\Auth\NewPasswordController;
 use App\Http\Controllers\Api\v1\Auth\VerifyEmailController;
 use App\Http\Controllers\Api\v1\Auth\RegisteredUserController;
 use App\Http\Controllers\Api\v1\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Api\v1\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Api\v1\Auth\EmailVerificationNotificationController;
+
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'endpoint does not exist'
+    ], 404);
+});
+
+Route::get(
+    'storage/test',
+    function () {
+
+        return Storage::disk('minio')->allFiles('/');
+    }
+);
+
 
 Route::group(
     ['prefix' => 'v1',  'accept' => 'application/json'],
