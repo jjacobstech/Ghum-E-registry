@@ -9,12 +9,6 @@ use App\Http\Controllers\Api\v1\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Api\v1\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Api\v1\Auth\EmailVerificationNotificationController;
 
-Route::fallback(function () {
-    return response()->json([
-        'message' => 'endpoint does not exist'
-    ], 404);
-});
-
 Route::get(
     'storage/test',
     function () {
@@ -66,3 +60,8 @@ Route::group(
         );
     }
 );
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'endpoint does not exist'
+    ], 404);
+});

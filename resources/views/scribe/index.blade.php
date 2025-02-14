@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost:8000";
+        var tryItOutBaseUrl = "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -151,7 +151,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 12, 2025</li>
+        <li>Last updated: February 14, 2025</li>
     </ul>
 </div>
 
@@ -160,7 +160,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:8000</code>
+    <strong>Base URL</strong>: <code>http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -188,14 +188,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/D(1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/D(1"
 );
 
 const headers = {
@@ -304,10 +304,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="fallbackPlaceholder"                data-endpoint="GETapi--fallbackPlaceholder-"
-               value="v"
+               value="D(1"
                data-component="url">
     <br>
-<p>Example: <code>v</code></p>
+<p>Example: <code>D(1</code></p>
             </div>
                     </form>
 
@@ -324,14 +324,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/storage/test" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/storage/test" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/storage/test"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/storage/test"
 );
 
 const headers = {
@@ -448,14 +448,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1"
 );
 
 const headers = {
@@ -485,7 +485,7 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: true,
-    &quot;message&quot;: &quot;Server running on http://localhost:8000/api/v1&quot;
+    &quot;message&quot;: &quot;Server running on http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1&quot;
 }</code>
  </pre>
     </span>
@@ -573,15 +573,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/register" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"fullname\": \"qtyvjrkxuhvomqao\",
-    \"email\": \"hfeest@example.net\",
-    \"password\": \"neque\",
-    \"department\": \"reiciendis\",
-    \"job_title\": \"maxime\",
+    \"fullname\": \"duurmowdirjfu\",
+    \"email\": \"marcus65@example.com\",
+    \"password\": \"eos\",
+    \"department\": \"vel\",
+    \"job_title\": \"eum\",
     \"agree\": \"1\"
 }"
 </code></pre></div>
@@ -589,7 +589,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/register"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/register"
 );
 
 const headers = {
@@ -598,11 +598,11 @@ const headers = {
 };
 
 let body = {
-    "fullname": "qtyvjrkxuhvomqao",
-    "email": "hfeest@example.net",
-    "password": "neque",
-    "department": "reiciendis",
-    "job_title": "maxime",
+    "fullname": "duurmowdirjfu",
+    "email": "marcus65@example.com",
+    "password": "eos",
+    "department": "vel",
+    "job_title": "eum",
     "agree": "1"
 };
 
@@ -692,10 +692,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="fullname"                data-endpoint="POSTapi-v1-register"
-               value="qtyvjrkxuhvomqao"
+               value="duurmowdirjfu"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>qtyvjrkxuhvomqao</code></p>
+<p>Must not be greater than 255 characters. Example: <code>duurmowdirjfu</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -703,10 +703,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-register"
-               value="hfeest@example.net"
+               value="marcus65@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>hfeest@example.net</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>marcus65@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -714,10 +714,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-register"
-               value="neque"
+               value="eos"
                data-component="body">
     <br>
-<p>Example: <code>neque</code></p>
+<p>Example: <code>eos</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>department</code></b>&nbsp;&nbsp;
@@ -725,10 +725,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="department"                data-endpoint="POSTapi-v1-register"
-               value="reiciendis"
+               value="vel"
                data-component="body">
     <br>
-<p>Example: <code>reiciendis</code></p>
+<p>Example: <code>vel</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>job_title</code></b>&nbsp;&nbsp;
@@ -736,10 +736,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="job_title"                data-endpoint="POSTapi-v1-register"
-               value="maxime"
+               value="eum"
                data-component="body">
     <br>
-<p>Example: <code>maxime</code></p>
+<p>Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>agree</code></b>&nbsp;&nbsp;
@@ -769,19 +769,19 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/login" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"zoie.price@example.org\",
-    \"password\": \"itaque\"
+    \"email\": \"francesco.waters@example.net\",
+    \"password\": \"ea\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/login"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/login"
 );
 
 const headers = {
@@ -790,8 +790,8 @@ const headers = {
 };
 
 let body = {
-    "email": "zoie.price@example.org",
-    "password": "itaque"
+    "email": "francesco.waters@example.net",
+    "password": "ea"
 };
 
 fetch(url, {
@@ -880,10 +880,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-login"
-               value="zoie.price@example.org"
+               value="francesco.waters@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>zoie.price@example.org</code></p>
+<p>Must be a valid email address. Example: <code>francesco.waters@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -891,10 +891,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-login"
-               value="itaque"
+               value="ea"
                data-component="body">
     <br>
-<p>Example: <code>itaque</code></p>
+<p>Example: <code>ea</code></p>
         </div>
         </form>
 
@@ -911,18 +911,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/forgot-password" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/forgot-password" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"russel.hilbert@example.org\"
+    \"email\": \"igerhold@example.com\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/forgot-password"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/forgot-password"
 );
 
 const headers = {
@@ -931,7 +931,7 @@ const headers = {
 };
 
 let body = {
-    "email": "russel.hilbert@example.org"
+    "email": "igerhold@example.com"
 };
 
 fetch(url, {
@@ -1020,10 +1020,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-forgot-password"
-               value="russel.hilbert@example.org"
+               value="igerhold@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>russel.hilbert@example.org</code></p>
+<p>Must be a valid email address. Example: <code>igerhold@example.com</code></p>
         </div>
         </form>
 
@@ -1040,20 +1040,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/reset-password" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/reset-password" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"token\": \"impedit\",
-    \"email\": \"henry.lubowitz@example.net\",
-    \"password\": \"dolores\"
+    \"token\": \"nesciunt\",
+    \"email\": \"whegmann@example.org\",
+    \"password\": \"qui\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/reset-password"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/reset-password"
 );
 
 const headers = {
@@ -1062,9 +1062,9 @@ const headers = {
 };
 
 let body = {
-    "token": "impedit",
-    "email": "henry.lubowitz@example.net",
-    "password": "dolores"
+    "token": "nesciunt",
+    "email": "whegmann@example.org",
+    "password": "qui"
 };
 
 fetch(url, {
@@ -1153,10 +1153,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-v1-reset-password"
-               value="impedit"
+               value="nesciunt"
                data-component="body">
     <br>
-<p>Example: <code>impedit</code></p>
+<p>Example: <code>nesciunt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1164,10 +1164,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-reset-password"
-               value="henry.lubowitz@example.net"
+               value="whegmann@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>henry.lubowitz@example.net</code></p>
+<p>Must be a valid email address. Example: <code>whegmann@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1175,10 +1175,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-reset-password"
-               value="dolores"
+               value="qui"
                data-component="body">
     <br>
-<p>Example: <code>dolores</code></p>
+<p>Example: <code>qui</code></p>
         </div>
         </form>
 
@@ -1195,14 +1195,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/verify-email/amet/aut" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/verify-email/mollitia/ad" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/verify-email/amet/aut"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/verify-email/mollitia/ad"
 );
 
 const headers = {
@@ -1312,10 +1312,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-verify-email--id---hash-"
-               value="amet"
+               value="mollitia"
                data-component="url">
     <br>
-<p>The ID of the verify email. Example: <code>amet</code></p>
+<p>The ID of the verify email. Example: <code>mollitia</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>hash</code></b>&nbsp;&nbsp;
@@ -1323,10 +1323,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="hash"                data-endpoint="GETapi-v1-verify-email--id---hash-"
-               value="aut"
+               value="ad"
                data-component="url">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>ad</code></p>
             </div>
                     </form>
 
@@ -1343,14 +1343,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/email/verification-notification" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/email/verification-notification" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/email/verification-notification"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/email/verification-notification"
 );
 
 const headers = {
@@ -1451,14 +1451,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/logout" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/logout"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/logout"
 );
 
 const headers = {
@@ -1559,14 +1559,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/dashboard" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/dashboard" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/dashboard"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/dashboard"
 );
 
 const headers = {
@@ -1684,20 +1684,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/user/share/file" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/share/file" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "receiver=voluptate"\
-    --form "title=poixdeuyuurxtjx"\
-    --form "description=Ullam delectus magni omnis."\
-    --form "assigned_to=eos"\
-    --form "subject=inventore"\
-    --form "file[]=@/tmp/phpGZuu2F" </code></pre></div>
+    --form "receiver=iusto"\
+    --form "title=wnrznuhyza"\
+    --form "description=Fugit provident consequatur ipsam ex a."\
+    --form "assigned_to=eveniet"\
+    --form "subject=corrupti"\
+    --form "file[]=@/tmp/phpZ6P7jJ" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/share/file"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/share/file"
 );
 
 const headers = {
@@ -1706,11 +1706,11 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('receiver', 'voluptate');
-body.append('title', 'poixdeuyuurxtjx');
-body.append('description', 'Ullam delectus magni omnis.');
-body.append('assigned_to', 'eos');
-body.append('subject', 'inventore');
+body.append('receiver', 'iusto');
+body.append('title', 'wnrznuhyza');
+body.append('description', 'Fugit provident consequatur ipsam ex a.');
+body.append('assigned_to', 'eveniet');
+body.append('subject', 'corrupti');
 body.append('file[]', document.querySelector('input[name="file[]"]').files[0]);
 
 fetch(url, {
@@ -1799,10 +1799,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="receiver"                data-endpoint="POSTapi-v1-user-share-file"
-               value="voluptate"
+               value="iusto"
                data-component="body">
     <br>
-<p>Example: <code>voluptate</code></p>
+<p>Example: <code>iusto</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>file</code></b>&nbsp;&nbsp;
@@ -1823,10 +1823,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-v1-user-share-file"
-               value="poixdeuyuurxtjx"
+               value="wnrznuhyza"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>poixdeuyuurxtjx</code></p>
+<p>Must not be greater than 255 characters. Example: <code>wnrznuhyza</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1834,10 +1834,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-v1-user-share-file"
-               value="Ullam delectus magni omnis."
+               value="Fugit provident consequatur ipsam ex a."
                data-component="body">
     <br>
-<p>Example: <code>Ullam delectus magni omnis.</code></p>
+<p>Example: <code>Fugit provident consequatur ipsam ex a.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>assigned_to</code></b>&nbsp;&nbsp;
@@ -1845,10 +1845,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="assigned_to"                data-endpoint="POSTapi-v1-user-share-file"
-               value="eos"
+               value="eveniet"
                data-component="body">
     <br>
-<p>Example: <code>eos</code></p>
+<p>Example: <code>eveniet</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>subject</code></b>&nbsp;&nbsp;
@@ -1856,10 +1856,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="subject"                data-endpoint="POSTapi-v1-user-share-file"
-               value="inventore"
+               value="corrupti"
                data-component="body">
     <br>
-<p>Example: <code>inventore</code></p>
+<p>Example: <code>corrupti</code></p>
         </div>
         </form>
 
@@ -1876,18 +1876,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/user/archive/file" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/archive/file" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"id\": \"dolor\"
+    \"id\": \"fugiat\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/archive/file"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/archive/file"
 );
 
 const headers = {
@@ -1896,7 +1896,7 @@ const headers = {
 };
 
 let body = {
-    "id": "dolor"
+    "id": "fugiat"
 };
 
 fetch(url, {
@@ -1985,10 +1985,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTapi-v1-user-archive-file"
-               value="dolor"
+               value="fugiat"
                data-component="body">
     <br>
-<p>Example: <code>dolor</code></p>
+<p>Example: <code>fugiat</code></p>
         </div>
         </form>
 
@@ -2005,14 +2005,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/user/file/reject/id" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/reject/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/file/reject/id"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/reject/sit"
 );
 
 const headers = {
@@ -2105,10 +2105,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTapi-v1-user-file-reject--id--"
-               value="id"
+               value="sit"
                data-component="url">
     <br>
-<p>The ID of the . Example: <code>id</code></p>
+<p>The ID of the . Example: <code>sit</code></p>
             </div>
                     </form>
 
@@ -2125,14 +2125,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/user/file/approve/iusto" \
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/approve/quam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/file/approve/iusto"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/approve/quam"
 );
 
 const headers = {
@@ -2225,10 +2225,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTapi-v1-user-file-approve--id--"
-               value="iusto"
+               value="quam"
                data-component="url">
     <br>
-<p>The ID of the . Example: <code>iusto</code></p>
+<p>The ID of the . Example: <code>quam</code></p>
             </div>
                     </form>
 
@@ -2245,14 +2245,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/file/accept/sint" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/accept/eum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/file/accept/sint"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/accept/eum"
 );
 
 const headers = {
@@ -2362,10 +2362,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-user-file-accept--id--"
-               value="sint"
+               value="eum"
                data-component="url">
     <br>
-<p>The ID of the . Example: <code>sint</code></p>
+<p>The ID of the . Example: <code>eum</code></p>
             </div>
                     </form>
 
@@ -2382,14 +2382,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/file/delete/iusto" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/delete/repellat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/file/delete/iusto"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/delete/repellat"
 );
 
 const headers = {
@@ -2499,10 +2499,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-user-file-delete--id--"
-               value="iusto"
+               value="repellat"
                data-component="url">
     <br>
-<p>The ID of the . Example: <code>iusto</code></p>
+<p>The ID of the . Example: <code>repellat</code></p>
             </div>
                     </form>
 
@@ -2519,14 +2519,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/file/reverse/action/velit" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/reverse/action/doloribus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/file/reverse/action/velit"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/file/reverse/action/doloribus"
 );
 
 const headers = {
@@ -2636,10 +2636,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-user-file-reverse-action--id--"
-               value="velit"
+               value="doloribus"
                data-component="url">
     <br>
-<p>The ID of the . Example: <code>velit</code></p>
+<p>The ID of the . Example: <code>doloribus</code></p>
             </div>
                     </form>
 
@@ -2656,14 +2656,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/new/files" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/new/files" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/new/files"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/new/files"
 );
 
 const headers = {
@@ -2781,14 +2781,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/shared/files" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/shared/files" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/shared/files"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/shared/files"
 );
 
 const headers = {
@@ -2906,14 +2906,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/received/files" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/received/files" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/received/files"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/received/files"
 );
 
 const headers = {
@@ -3031,14 +3031,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/archived/files" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/archived/files" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/archived/files"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/archived/files"
 );
 
 const headers = {
@@ -3156,14 +3156,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/user/pending/files" \
+    --get "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/pending/files" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/user/pending/files"
+    "http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io/api/v1/user/pending/files"
 );
 
 const headers = {

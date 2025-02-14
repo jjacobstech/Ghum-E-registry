@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:8000</code>
+    <strong>Base URL</strong>: <code>http://zoggowsw4wcccs0o4cs48gck.212.56.44.88.sslip.io</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.
