@@ -1,0 +1,683 @@
+openapi: 3.0.3
+info:
+  title: 'Ghum E-Registry API Documentation'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'localhost:8000'
+tags:
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
+paths:
+  /api/storage/test:
+    get:
+      summary: ''
+      operationId: getApiStorageTest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example:
+                  - files/1739371438mg5f7LW9fiLTwvH9ByvUpKaQk.png
+      tags:
+        - Endpoints
+      security: []
+  /api/v1:
+    get:
+      summary: ''
+      operationId: getApiV1
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Server running on localhost:8000/api/v1'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Server running on localhost:8000/api/v1'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/register:
+    post:
+      summary: 'Handle an incoming registration request.'
+      operationId: handleAnIncomingRegistrationRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fullname:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: zbailey@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                department:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                job_title:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                agree:
+                  type: string
+                  description: ''
+                  example: '1'
+                  nullable: false
+                  enum:
+                    - '1'
+              required:
+                - fullname
+                - email
+                - password
+                - department
+                - job_title
+                - agree
+      security: []
+  /api/v1/login:
+    post:
+      summary: 'Handle an incoming authentication request.'
+      operationId: handleAnIncomingAuthenticationRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: gbailey@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/forgot-password:
+    post:
+      summary: 'Handle an incoming password reset link request.'
+      operationId: handleAnIncomingPasswordResetLinkRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: gbailey@example.net
+                  nullable: false
+              required:
+                - email
+      security: []
+  /api/v1/reset-password:
+    post:
+      summary: 'Handle an incoming new password request.'
+      operationId: handleAnIncomingNewPasswordRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: zbailey@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+              required:
+                - token
+                - email
+                - password
+      security: []
+  '/api/v1/verify-email/{id}/{hash}':
+    get:
+      summary: "Mark the authenticated user's email address as verified."
+      operationId: markTheAuthenticatedUsersEmailAddressAsVerified
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verify email.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: hash
+        description: ''
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/v1/email/verification-notification:
+    post:
+      summary: 'Send a new email verification notification.'
+      operationId: sendANewEmailVerificationNotification
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/logout:
+    post:
+      summary: 'Destroy an authenticated session.'
+      operationId: destroyAnAuthenticatedSession
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/dashboard:
+    get:
+      summary: ''
+      operationId: getApiV1UserDashboard
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/share/file:
+    post:
+      summary: ''
+      operationId: postApiV1UserShareFile
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                receiver:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                file:
+                  type: array
+                  description: 'Must be a file.'
+                  items:
+                    type: string
+                    format: binary
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Eius et animi quos velit et.'
+                  nullable: false
+                assigned_to:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+                subject:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+              required:
+                - receiver
+                - title
+                - assigned_to
+                - subject
+      security: []
+  /api/v1/user/archive/file:
+    post:
+      summary: ''
+      operationId: postApiV1UserArchiveFile
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: false
+              required:
+                - id
+      security: []
+  '/api/v1/user/file/reject/{id}':
+    post:
+      summary: ''
+      operationId: postApiV1UserFileRejectId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: architecto
+  '/api/v1/user/file/approve/{id}':
+    post:
+      summary: ''
+      operationId: postApiV1UserFileApproveId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: architecto
+  '/api/v1/user/file/accept/{id}':
+    get:
+      summary: ''
+      operationId: getApiV1UserFileAcceptId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: architecto
+  '/api/v1/user/file/delete/{id}':
+    get:
+      summary: ''
+      operationId: getApiV1UserFileDeleteId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: architecto
+  '/api/v1/user/file/reverse/action/{id}':
+    get:
+      summary: ''
+      operationId: getApiV1UserFileReverseActionId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: architecto
+  /api/v1/user/new/files:
+    get:
+      summary: ''
+      operationId: getApiV1UserNewFiles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/shared/files:
+    get:
+      summary: ''
+      operationId: getApiV1UserSharedFiles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/received/files:
+    get:
+      summary: ''
+      operationId: getApiV1UserReceivedFiles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/archived/files:
+    get:
+      summary: ''
+      operationId: getApiV1UserArchivedFiles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/user/pending/files:
+    get:
+      summary: ''
+      operationId: getApiV1UserPendingFiles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated
+                  error: 'Invalid Bearer Token'
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated
+                  error:
+                    type: string
+                    example: 'Invalid Bearer Token'
+      tags:
+        - Endpoints
+      security: []
