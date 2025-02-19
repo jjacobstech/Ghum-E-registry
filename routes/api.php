@@ -60,8 +60,3 @@ Route::group(
         );
     }
 );
-Route::fallback(function () {
-    return response()->json([
-        'message' => 'endpoint does not exist'
-    ], 404);
-});
