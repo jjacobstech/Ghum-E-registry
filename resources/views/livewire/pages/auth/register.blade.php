@@ -1,6 +1,5 @@
 <?php
 
-use Rules\Password;
 use App\Models\User;
 use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
@@ -8,6 +7,7 @@ use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Validation\Rules\Password;
 
 new #[Layout('layouts.guest')] class extends Component {
     public string $name = '';

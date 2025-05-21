@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\v1\FilesController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Dashboard
-Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('api.dashboard');
 
 // File Actions
 Route::post('/share/file', [FilesController::class, 'shareFile']);
