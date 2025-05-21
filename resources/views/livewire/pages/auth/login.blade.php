@@ -24,7 +24,7 @@ new #[Layout('layouts.guest')] class extends Component
     }
 }; ?>
 
-<div>
+<div class="my-5">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -34,11 +34,11 @@ new #[Layout('layouts.guest')] class extends Component
                     <!-- Header -->
                     <div class="mb-8 text-right text-gray-400">
                         <p>YOUR</p>
-                        <p class="font-medium">Personal Info.</p>
+                        <p class="font-medium">Login Details.</p>
                     </div>
 
                     <!-- Form Section -->
-                    <h1 class="mb-2 text-3xl font-bold text-gray-800">Register Your Account!</h1>
+                    <h1 class="mb-2 text-3xl font-bold text-gray-800">Log in</h1>
                     <p class="mb-8 text-gray-500">We need your personal details to work better with you.</p>
 
                     <form wire:submit.prevent='login'">
@@ -92,12 +92,12 @@ new #[Layout('layouts.guest')] class extends Component
                     </form>
 
                       <div class="flex items-center justify-between mt-4">
-        <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        <a class="text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             href="{{ route('register') }}" wire:navigate>
             {{ __('Dont Have An Account?') }}
         </a>
         @if (Route::has('password.request'))
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            <a class="text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 href="{{ route('password.request') }}" wire:navigate>
                 {{ __('Forgot your password?') }}
             </a>

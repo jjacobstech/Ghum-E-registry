@@ -71,7 +71,7 @@ new #[Layout('layouts.guest')] class extends Component
 
 
 
-    <div class="w-full max-w-lg mx-auto">
+    <div class="w-full max-w-lg pt-10 mx-auto">
     <!-- Header -->
     <div class="mb-8 text-right text-gray-400">
         <p>YOUR</p>
@@ -135,7 +135,7 @@ new #[Layout('layouts.guest')] class extends Component
     </form>
 
     <div class="flex items-center justify-end mt-4">
-        <a class="underline text-md text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        <a class="text-gray-600 underline rounded-md text-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             href="{{ route('login') }}" wire:navigate>
             {{ __('Login') }}
         </a>
