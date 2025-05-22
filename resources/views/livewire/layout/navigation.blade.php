@@ -1,23 +1,62 @@
-<?php
-
-use App\Livewire\Actions\Logout;
-use Livewire\Volt\Component;
-
-new class extends Component {
-    /**
-     * Log the current user out of the application.
-     */
-    public function logout(Logout $logout): void
-    {
-        $logout();
-
-        $this->redirect('/', navigate: true);
-    }
-}; ?>
-
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <div class="flex gap-3">
-<img src="{{ asset('assets/logo.svg') }}" alt="">
+<nav x-data="{ open: false }" class="flex justify-between  bg-white border-b border-gray-100">
+    <div class="flex gap-3 mx-5 text-gray-600 w-1/2 py-4">
+        <span>
+            <svg class="fill-gray-600" width="44" height="30" viewBox="0 0 44 30" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.506 28.7517C7.86923 29.9003 4.98067 30.2576 2.18354 29.8175C0.395721 29.5362 -0.435764 27.5944 0.22639 25.9101C0.888543 24.2257 2.81925 23.4695 4.6289 23.4451C5.74072 23.4302 6.84935 23.1958 7.88853 22.7431C9.94215 21.8485 11.5563 20.1747 12.3758 18.09C13.1954 16.0053 13.1532 13.6805 12.2586 11.6268C11.8059 10.5877 11.1537 9.66103 10.3497 8.89293C9.04112 7.64274 8.14234 5.77412 8.80449 4.08979C9.46664 2.40545 11.3979 1.54975 12.8986 2.56125C14.1094 3.37728 15.1935 4.36514 16.1172 5.49216C16.3489 5.77496 16.7889 5.77498 17.0207 5.49216C19.1554 2.88729 22.1047 1.07661 25.3936 0.351654C28.6825 -0.373291 32.1197 0.0296631 35.1517 1.49566C38.1838 2.96165 40.6342 5.40538 42.1086 8.43336C42.9639 10.1899 43.4618 12.0838 43.5894 14.007C43.7432 16.3251 41.4393 17.788 39.1692 17.2942C36.8991 16.8004 35.5817 14.4045 34.625 12.2875C34.5991 12.2301 34.5723 12.173 34.5447 12.1163C33.8972 10.7866 32.8211 9.71348 31.4897 9.06971C30.1582 8.42593 28.6488 8.24899 27.2045 8.56734C25.7602 8.88569 24.4651 9.68082 23.5277 10.8247C22.5902 11.9686 22.065 13.3947 22.0366 14.8734C22.0082 16.352 22.4783 17.7973 23.3711 18.9763C24.2639 20.1554 25.5275 20.9997 26.9585 21.3733C27.0195 21.3892 27.0807 21.4043 27.1421 21.4184C29.4058 21.9405 32.0138 22.7616 32.9439 24.8904C33.8741 27.0193 32.8923 29.5657 30.5892 29.8703C28.6784 30.123 26.7236 30.0069 24.8333 29.5133C21.5746 28.6626 18.6971 26.7399 16.664 24.055C16.6164 23.9921 16.5215 23.9921 16.4738 24.055C14.9338 26.0887 12.8861 27.7148 10.506 28.7517Z" />
+            </svg>
+        </span>
+        <span class="mt-2 font-extrabold">
+            ABSG
+        </span>
     </div>
 
+    <div class="w-[32%] justify-left flex ">
+        <span class="w-[13%]  items-center text-center  hover:text-gray-500 text-gray-400 py-4">
+            <span class=" py-1 h-8 border-l border-gray-300 w-full px-4">
+
+                @svg('solar-magnifer-outline',['class' => 'w-6 h-6 inline-block font-extrabold '])
+            </span>
+        </span>
+        <span class="w-[17%] border-l border-gray-300 items-center text-center py-4 hover:text-gray-500 text-gray-400">
+            <span class="absolute bg-red-500 text-white text-xs font-bold rounded-full h-4s w-4 top-4 ml-4 animate-bounce">
+                2
+            </span>
+            @svg('solar-bell-bold',['class' => 'w-7 h-7 inline-block '])
+        </span>
+        <span class="w-[20%] border-l border-gray-300 items-center text-center py-4 flex text-gray-400 hover:text-gray-500 text-sm px-3">
+            @svg('solar-question-circle-bold',['class' => 'w-7 h-7 inline-block'])
+            <span class="block-inline">Help</span>
+        </span>
+        <div class="w-[50] border-l border-gray-300 items-center text-center my-3 py-1 h-8 flex gap-3 px-5 hover:text-gray-500 text-black">
+
+            <span class="rounded-full bg-teal-500 text-white w-8 text-sm text-center uppercase py-1.5 h-8">
+                jj
+            </span>
+
+           <x-dropdown>
+            <x-slot name="trigger">
+                 <div class="grid hover:text-gray-500">
+                <span class="text-xs  flex justify-start">
+                    {{ Auth::user()->name }}
+                </span>
+                <span class="text-xs  flex justify-start">
+                    {{ Auth::user()->department }}
+                </span>
+            </div>
+            </x-slot>
+            <x-slot name="content">
+                 <div class="grid hover:text-gray-500">
+                <span class="text-xs  flex justify-start">
+                    {{ Auth::user()->name }}
+                </span>
+                <span class="text-xs  flex justify-start">
+                    {{ Auth::user()->department }}
+                </span>
+            </div>
+            </x-slot>
+
+           </x-dropdown>
+        </div>
+    </div>
 </nav>

@@ -14,6 +14,10 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors:{
+                "flag-green": "#15411F",
+                'grayish': "#5F6D7E"
+            }
         },
     },
 

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Volt::route('/', 'pages.auth.login');
 
-Route::view('dashboard', 'dashboard')
+Volt::route('dashboard', 'home')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
